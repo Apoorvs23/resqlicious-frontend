@@ -37,6 +37,7 @@ const Home = () => {
   const handleSearchTypeToggle = () => {
     setSearchType((prevType) => (prevType === "cuisine" ? "name" : "cuisine"));
   };
+
   const filteredRestaurants = restaurants.filter((restaurant) =>
     searchType === "cuisine"
       ? restaurant.cuisine.toLowerCase().includes(search.toLowerCase())
